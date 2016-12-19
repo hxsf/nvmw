@@ -132,9 +132,9 @@ if %NODE_TYPE% == iojs (
   )
 ) else (
   if %ARCH% == x32 (
-    set NODE_EXE_URL=%NVMW_NODEJS_ORG_MIRROR%/%NODE_VERSION%/node.exe
+    set NODE_EXE_URL=%NVMW_NODEJS_ORG_MIRROR%/%NODE_VERSION%/win-x86/node.exe
   ) else (
-    set NODE_EXE_URL=%NVMW_NODEJS_ORG_MIRROR%/%NODE_VERSION%/x64/node.exe
+    set NODE_EXE_URL=%NVMW_NODEJS_ORG_MIRROR%/%NODE_VERSION%/win-x64/node.exe
   )
 )
 
@@ -172,7 +172,7 @@ if not exist "%NODE_EXE_FILE%" (
 
   echo Start install npm
 
-  "%NODE_EXE_FILE%" "%NVMW_HOME%\get_npm.js" "%NODE_HOME%" "%NODE_TYPE%/%NODE_VERSION%"
+  "%NODE_EXE_FILE%" "%NVMW_HOME%get_npm.js" "%NODE_HOME%" "%NODE_TYPE%/%NODE_VERSION%"
   if not exist "%NPM_ZIP_FILE%" goto install_error
 
   set "CD_ORG=%CD%"
