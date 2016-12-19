@@ -3,7 +3,7 @@ var util = require('util'),
     path = require('path'),
     wget = require('./wget');
 
-var NPM_PKG_JSON_URL = 'https://raw.githubusercontent.com/%s/%s/deps/npm/package.json';
+var NPM_PKG_JSON_URL = 'https://raw.githubusercontent.com/nodejs/node/%s/deps/npm/package.json';
 // https://github.com/npm/npm/tags
 var NVMW_NPM_MIRROR = process.env.NVMW_NPM_MIRROR || 'https://github.com/npm/npm/archive';
 var BASE_URL = NVMW_NPM_MIRROR + '/v%s.zip';
@@ -41,8 +41,7 @@ if (binType === 'iojs') {
     downloadNpmZip(npmVersion);
   });
 } else {
-  var pkgUri = util.format(NPM_PKG_JSON_URL, 'nodejs/node',
-    binVersion === 'latest' ? 'master' : binVersion);
+  var pkgUri = util.format(NPM_PKG_JSON_URL, binVersion === 'latest' ? 'master' : binVersion);
   wget(pkgUri, function (filename, pkg) {
     if (filename === null) {
       return noNpmAndExit();

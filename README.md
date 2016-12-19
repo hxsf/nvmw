@@ -1,8 +1,25 @@
-**SORRY, nvmw is no longer maintained. If someone wants to keep maintained, contact me by [email](mailto://hakobera@gmail.com) or [twitter](https://twitter.com/hakobera).**
+> **SORRY, nvmw is no longer maintained. If someone wants to keep maintained, contact the author by [email](mailto://hakobera@gmail.com) or [twitter](https://twitter.com/hakobera).**
 
 Node Version Manager for Windows
 ================================
-nvmw is a simple Node Version Manager for Windows.
+**nvmw is a simple Node Version Manager for Windows.**
+
+
+This is a fork version from [hakobera/nvmw](https://github.com/hakobera/nvmw)
+
+I change something and fix something, make it can work for me.
+
+changelog
+---------
+
+- [x] node version > 4 support
+- [x] change node repository url
+- [ ] add .nvmrc support
+
+
+The following is from the original project
+==========================================
+
 
 Prerequisites
 -------------
@@ -78,7 +95,7 @@ FAQ
 
 Maybe you associated ".js" file to another app, not JScript engine. To fix, see [here](http://www.winhelponline.com/articles/230/1/Error-There-is-no-script-engine-for-file-extension-when-running-js-files.html)
 
-LICENSE
+LICENSE of *Kazuyuki Honda*
 -------
 (The MIT License)
 
